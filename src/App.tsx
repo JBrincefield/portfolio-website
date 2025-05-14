@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
+import About from './components/pages/About';
+import Resume from './components/pages/Resume';
+import Portfolio from './components/pages/Portfolio';
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeTab, setActiveTab] = useState('about');
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'about':
+        return <About />;
+      case 'resume':
+        return <Resume />;
+      case 'portfolio':
+        return <Portfolio />;
+      default:
+        return <About />;
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+  <div className="bg-[#101010] text-white min-h-screen w-full flex justify-center p-6">
+    <audio id="audio" loop autoPlay>
+      <source src="/music.mp3" type="audio/mpeg"/>
+    </audio>
+    <div className="flex w-full max-w-7xl">
+      {/* Sidebar */}
+      <div className="sticky top-6 self-start">
+        <Sidebar />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+      {/* Main Card */}
+      <div className="flex-1 ml-6 bg-[#181818] rounded-lg shadow-lg p-6 overflow-y-auto max-h-[calc(100vh-3rem)] min-w-[300px]">
+        <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+        <main className="mt-6">{renderContent()}</main>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  </div>
+);
+
 }
 
-export default App
+export default App;
