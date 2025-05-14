@@ -16,7 +16,7 @@ export default function Sidebar() {
 
             {/* Name and Title */}
             <h2 className="text-xl font-bold mt-4">Jacob Brincefield</h2>
-            <span className="text-sm mt-1 bg-gray-800 px-3 py-1 rounded">Neumont Student</span>
+            <span className="text-sm mt-1 bg-gray-800 px-3 py-1 rounded">Full-Stack Developer & CS Student @ Neumont</span>
 
             {/* Divider */}
             <hr className="my-6 w-full border-gray-600" />

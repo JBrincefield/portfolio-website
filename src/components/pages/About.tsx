@@ -1,32 +1,46 @@
-export default function About() {
+const About = () => {
     return (
-        <section className="text-white p-6">
-            <h2 className="text-3xl font-bold mb-4">About <span className="text-accent">Me</span></h2>
-            <p className="text-secondary mb-4">
-                I am a student of Computer Science at Neumont College of Computer Science with a strong 
-                foundation in software development. I enjoy creating modern, interactive web applications 
-                using technologies like React, TypeScript, and Spring Boot, and am also knowledgeable about 
-                Java, C#, and Unity. My past internship with the City of Tacoma IT department gave me hands-on 
-                experience with enterprise systems, and I'm always looking for ways to continue to grow as a 
-                developer through innovation and collaboration.
-            </p>
+        <section className="max-w-5xl mx-auto px-6 py-12" style={{ color: '#FFFFF0' }}>
+            <div className="mb-10">
+                <h1 className="text-3xl md:text-4xl font-bold mb-3">About Me</h1>
+                <p className="text-lg text-zinc-300 max-w-3xl">
+                    I’m Jacob, a full-stack developer with a passion for creating responsive web applications and intuitive user interfaces. My journey started in game development, but I quickly found a home in full-stack work — where logic, design, and interaction all collide.
+                </p>
+            </div>
 
-            <div className="mb-8">
-    <h2 className="text-2xl font-semibold mb-3" style={{ color: "#ED7E07" }}>Skills</h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-        {[
-            "Java", "C#", "JavaScript", "HTML", "React", "TypeScript", "Spring Boot", "ShadCN",
-            "Socket.io", "SQL/NoSQL", "Unity", "GitHub", "Postman"
-        ].map((skill) => (
-            <span
-            key={skill}
-            className="px-3 py-1 rounded text-sm font-medium bg-[#22577A] text-[#FAFFEB] hover:bg-[#ED7E07] hover:text-black transition-colors duration-200"
-            >
-            {skill}
-            </span>
-        ))}
-        </div>
-    </div>
+            <div className="grid md:grid-cols-2 gap-10">
+                <div className="space-y-6">
+                    <p>
+                        I enjoy turning abstract ideas into elegant solutions — whether that means refining a React UI, wiring up a database, or figuring out how to make something just a bit more intuitive for users.
+                    </p>
+                    <p>
+                        Lately I’ve been building a lot with Firebase and Tailwind, while also diving deeper into Java, Spring Boot, and cloud architecture.
+                    </p>
+                    <p>
+                        Outside of work, I love fantasy writing, strategy games, and tinkering with creative coding experiments.
+                    </p>
+                </div>
+
+                <div className="space-y-4">
+                    <h2 className="text-xl font-semibold" style={{ color: '#38bdf8' }}>What I Work With</h2>
+                    <ul className="space-y-2">
+                        <li className="border-l-4 pl-4" style={{ color: '#38bdf8' }}>
+                            <span className="font-medium">Frontend:</span> React, Tailwind CSS, ShadCN, TypeScript
+                        </li>
+                        <li className="border-l-4 pl-4" style={{ color: '#38bdf8' }}>
+                            <span className="font-medium">Backend:</span> Java, Firebase, Node.js, MySQL
+                        </li>
+                        <li className="border-l-4 pl-4" style={{ color: '#38bdf8' }}>
+                            <span className="font-medium">Tools:</span> Git, Vite, Figma, VS Code
+                        </li>
+                        <li className="border-l-4 pl-4" style={{ color: '#38bdf8' }}>
+                            <span className="font-medium">Currently Learning:</span> Spring Boot, Cloud Functions, Next.js
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
     );
-}
+};
+
+export default About;
