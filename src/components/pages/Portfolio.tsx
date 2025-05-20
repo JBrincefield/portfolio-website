@@ -42,7 +42,7 @@ const GithubProjects: React.FC = () => {
         html_url: "https://github.com/Ghussy/Rollio",
         created_at: "2024-09-05T00:00:00Z",
         updated_at: "2024-10-15T00:00:00Z",
-        topics: ["unity", "game-dev", "physics", "collaboration"],
+        topics: ["unity", "game-dev", "physics", "collaboration", "portfolio"],
         isManual: true
     },
     {
